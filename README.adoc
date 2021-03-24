@@ -1,0 +1,24 @@
+== How to run the application ==
+
+The application is started using maven wrapper.
+To run the application ...
+
+1) Start it up
+
+On Windows: ./mvnw.cmd spring-boot:run
+
+On Linux or MacOs ./mvnw spring-boot:run
+
+2) Type in the browser address bar i.e. "http://localhost:8080/wordanalyzer/analyze?word=wordyouwanttoprocess"
+
+3) The output will be JSON.
+
+== How the application works ==
+
+1) It's simple project that consists of two main classes "ApiController" and "WordAnalysisService".
+
+2) This application calculates the last the most value letter in the word and its count.
+
+3) The application uses mockito be covered with tests.
+
+4) ExceptionHandler processes empty string exception.
