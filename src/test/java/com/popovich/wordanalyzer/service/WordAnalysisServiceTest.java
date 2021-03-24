@@ -15,26 +15,26 @@ class WordAnalysisServiceTest {
     @Test
     void testEmptyInputThrowsException() {
         assertThrows(EmptyInputStringException.class, () ->
-            service.findMostCommondLetterAndCount("")
+            service.findMostCommonLetterAndCount("")
         );
     }
 
     @Test
     public void testCaseOfSingleMostCommonLetterProcessedCorrectly() {
-        assertEquals(toDto('a', 1), service.findMostCommondLetterAndCount("a"));
-        assertEquals(toDto('b', 2), service.findMostCommondLetterAndCount("bb"));
-        assertEquals(toDto('c', 2), service.findMostCommondLetterAndCount("coach"));
-        assertEquals(toDto('o', 2), service.findMostCommondLetterAndCount("kongo"));
-        assertEquals(toDto('b', 2), service.findMostCommondLetterAndCount("lobby"));
-        assertEquals(toDto('a', 3), service.findMostCommondLetterAndCount("lavanda"));
+        assertEquals(toDto('a', 1), service.findMostCommonLetterAndCount("a"));
+        assertEquals(toDto('b', 2), service.findMostCommonLetterAndCount("bb"));
+        assertEquals(toDto('c', 2), service.findMostCommonLetterAndCount("coach"));
+        assertEquals(toDto('o', 2), service.findMostCommonLetterAndCount("kongo"));
+        assertEquals(toDto('b', 2), service.findMostCommonLetterAndCount("lobby"));
+        assertEquals(toDto('a', 3), service.findMostCommonLetterAndCount("lavanda"));
     }
 
     @Test
     public void testCaseOfSeveralMostCommonLettersProcessedCorrectly() {
-        assertEquals(toDto('b', 1), service.findMostCommondLetterAndCount( "ab"));
-        assertEquals(toDto('b', 2 ), service.findMostCommondLetterAndCount( "loobby"));
-        assertEquals(toDto('r', 2 ), service.findMostCommondLetterAndCount( "repository"));
-        assertEquals(toDto('u', 3 ), service.findMostCommondLetterAndCount( "chupachupsplum"));
+        assertEquals(toDto('b', 1), service.findMostCommonLetterAndCount( "ab"));
+        assertEquals(toDto('b', 2 ), service.findMostCommonLetterAndCount( "loobby"));
+        assertEquals(toDto('r', 2 ), service.findMostCommonLetterAndCount( "repository"));
+        assertEquals(toDto('u', 3 ), service.findMostCommonLetterAndCount( "chupachupsplum"));
     }
 
     private LetterCountDto toDto(Character c, Integer n) {

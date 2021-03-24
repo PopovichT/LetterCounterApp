@@ -41,7 +41,7 @@ class ApiControllerTest {
 
     @Test
     void testInvalidInputReturnsCode4XX() throws Exception {
-        when(service.findMostCommondLetterAndCount(any()))
+        when(service.findMostCommonLetterAndCount(any()))
                 .thenThrow(new EmptyInputStringException());
 
         mockMvc.perform(get("/wordanalyzer/analyze?word="))
@@ -50,11 +50,11 @@ class ApiControllerTest {
     }
 
     private void mockWordAnalysisServiceOutput(LetterCountDto letterCountDto) {
-        when(service.findMostCommondLetterAndCount(any()))
+        when(service.findMostCommonLetterAndCount(any()))
                 .thenReturn(letterCountDto);
     }
 
     private void verifyWordAnalysisServiceCalledWithInput(String input) {
-        verify(service).findMostCommondLetterAndCount(input);
+        verify(service).findMostCommonLetterAndCount(input);
     }
 }

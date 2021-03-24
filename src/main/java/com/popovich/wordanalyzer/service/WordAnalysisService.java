@@ -10,7 +10,7 @@ import java.util.*;
 @Service
 public class WordAnalysisService {
 
-    public LetterCountDto findMostCommondLetterAndCount(String input) {
+    public LetterCountDto findMostCommonLetterAndCount(String input) {
 
         if ("".equals(input)) {
             throw new EmptyInputStringException();

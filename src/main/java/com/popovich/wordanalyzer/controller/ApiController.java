@@ -20,6 +20,6 @@ public class ApiController {
 
     @GetMapping("/analyze")
     public LetterCountDto analyze(@RequestParam(name = "word") String word) {
-        return service.findMostCommondLetterAndCount(word);
+        return service.findMostCommonLetterAndCount(word);
     }
 }
